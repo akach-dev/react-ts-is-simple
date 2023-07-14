@@ -13,3 +13,4 @@ root.render(
   </React.StrictMode>
 );
 
+export {Accordion} from "./components/AccordionAccordionTitle";

@@ -1,8 +1,12 @@
-import React from 'react';
+import React from "react";
+import {AccordionTitle} from "./AccordionTitle";
+import {AccordionBody} from "./AccordionBody";
 
-export function Accordion(props) {
+export function Accordion() {
   return (
-     <div></div>
+     <>
+       <AccordionTitle/>
+       <AccordionBody/>
+     </>
   );
 }
-
