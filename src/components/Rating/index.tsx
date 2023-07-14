@@ -11,7 +11,6 @@ export function Rating(props: any) {
         <Star selected={false}/>
       </div>
 
-      break;
     case 2 :
       return <div>
         <Star selected={true}/>
@@ -20,7 +19,7 @@ export function Rating(props: any) {
         <Star selected={false}/>
         <Star selected={false}/>
       </div>
-      break;
+
     case 3 :
       return <div>
         <Star selected={true}/>
@@ -30,7 +29,6 @@ export function Rating(props: any) {
         <Star selected={false}/>
       </div>
 
-      break;
     case 4 :
       return <div>
         <Star selected={true}/>
@@ -40,7 +38,6 @@ export function Rating(props: any) {
         <Star selected={false}/>
       </div>
 
-      break;
     case 5 :
       return <div>
         <Star selected={true}/>
@@ -49,7 +46,7 @@ export function Rating(props: any) {
         <Star selected={true}/>
         <Star selected={true}/>
       </div>
-      break;
+
     default :
       return <div>
         <Star selected={false}/>
@@ -59,7 +56,7 @@ export function Rating(props: any) {
         <Star selected={false}/>
       </div>
 
-      break;
+      // break;
   }
 }
 
