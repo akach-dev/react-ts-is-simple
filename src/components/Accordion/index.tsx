@@ -2,10 +2,10 @@ import React from "react";
 import {AccordionTitle} from "./AccordionTitle";
 import {AccordionBody} from "./AccordionBody";
 
-export function Accordion() {
+export function Accordion({title}: any) {
   return (
      <>
-       <AccordionTitle/>
+       <AccordionTitle title={title}/>
        <AccordionBody/>
      </>
   );
