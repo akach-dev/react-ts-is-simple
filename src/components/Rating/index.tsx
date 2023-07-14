@@ -1,7 +1,12 @@
 import React from 'react';
 
-export function Rating(props: any) {
-  switch (props.value) {
+
+type RatingPropsType = {
+  value: number
+}
+
+export function Rating({value}: RatingPropsType) {
+  switch (value) {
     case 1 :
       return <div>
         <Star selected={true}/>
