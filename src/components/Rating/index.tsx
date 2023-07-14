@@ -2,7 +2,7 @@ import React from 'react';
 
 
 type RatingPropsType = {
-  value: number
+  value: 0 | 1 | 2 | 3 | 4 | 5
 }
 
 export function Rating({value}: RatingPropsType) {
@@ -63,7 +63,11 @@ export function Rating({value}: RatingPropsType) {
   }
 }
 
-function Star({selected}: any) {
+type StarPropsType = {
+  selected: boolean
+}
+
+function Star({selected}: StarPropsType) {
   return selected ? <span><b>star </b></span> : <span>star </span>
 }
 

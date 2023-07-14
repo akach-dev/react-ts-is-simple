@@ -1,6 +1,11 @@
 import React from "react";
 
-export function PageTitle({title}: any) {
+
+type  PageTitlePropsType = {
+  title: string
+}
+
+export function PageTitle({title}: PageTitlePropsType) {
   return <h2>
     {
       title
