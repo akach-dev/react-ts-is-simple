@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {Rating} from "./components/Rating";
-import {Accordion} from "./components/Accordion/AccordionTitle";
+import {Accordion} from "./components/Accordion";
 
 function App() {
   return (
     <div className="App">
-      <AppTitle/>
-      <Rating/>
+      <PageTitle title={'This is App component'}/>
+      <Rating value={3}/>
       <Accordion/>
-      <Rating/>
+      <Rating value={1}/>
+      <Rating value={2}/>
+      <Rating value={3}/>
+      <Rating value={4}/>
+      <Rating value={5}/>
     </div>
   );
 }
 
-function AppTitle() {
-  return <>
-    This is App component
-  </>
+function PageTitle({ title }: any) {
+  return <h2>
+    {
+      title
+    }
+  </h2>
 }
 
 export default App;
