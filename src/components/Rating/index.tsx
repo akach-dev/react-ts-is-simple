@@ -55,8 +55,6 @@ export function Rating(props: any) {
         <Star selected={false}/>
         <Star selected={false}/>
       </div>
-
-      // break;
   }
 }
 
