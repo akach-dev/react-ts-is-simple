@@ -5,20 +5,20 @@ import {Accordion} from "./components/Accordion";
 
 function App() {
   return (
-    <div className="App">
-      <PageTitle title={'This is App component'}/>
-      <Rating value={3}/>
-      <Accordion/>
-      <Rating value={1}/>
-      <Rating value={2}/>
-      <Rating value={3}/>
-      <Rating value={4}/>
-      <Rating value={5}/>
-    </div>
+     <div className="App">
+       <PageTitle title={'This is App component'}/>
+       <Rating value={3}/>
+       <Accordion/>
+       <Rating value={1}/>
+       <Rating value={2}/>
+       <Rating value={3}/>
+       <Rating value={4}/>
+       <Rating value={5}/>
+     </div>
   );
 }
 
-function PageTitle({ title }: any) {
+function PageTitle({title}: any) {
   return <h2>
     {
       title
