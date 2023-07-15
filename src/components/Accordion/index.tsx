@@ -5,9 +5,10 @@ import {AccordionBody} from "./AccordionBody";
 
 type  AccordionPropsType = {
   title: string
+  collapsed: boolean
 }
 
-export function Accordion({title}: AccordionPropsType) {
+export function Accordion({title, collapsed}: AccordionPropsType) {
   return (
      <>
        <AccordionTitle title={title}/>
