@@ -11,8 +11,11 @@ type  AccordionPropsType = {
 export function Accordion({title, collapsed}: AccordionPropsType) {
   return (
      <>
-       <AccordionTitle title={title}/>
-       <AccordionBody/>
+       {
+         collapsed
+            ? <AccordionTitle title={title}/>
+            : <AccordionBody/>
+       }
      </>
   );
 }
