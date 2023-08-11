@@ -14,10 +14,9 @@ export function Accordion({title, collapsed}: AccordionPropsType) {
        <AccordionTitle title={title}/>
        {
           collapsed && (
-             <AccordionBody/>
+             <AccordionBody key={'body'}/>
           )
        }
-
      </div>
   )
 }
