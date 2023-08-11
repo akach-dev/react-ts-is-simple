@@ -4,13 +4,16 @@ import './App.css';
 export function App() {
   return (
      <div className="App">
-       <h2>This is APP Component</h2>
+       <AppTitle/>
        <Rating/>
        <Accordion/>
      </div>
   );
 }
 
+export function AppTitle() {
+  return <h2>This is APP Component</h2>
+}
 
 export function Rating() {
   return (
@@ -24,19 +27,29 @@ export function Rating() {
   )
 }
 
+function Star() {
+  return <div>star</div>
+}
+
 function Accordion() {
   return (
      <div>
-       <h3>Menu</h3>
-       <ul>
-         <li>1</li>
-         <li>2</li>
-         <li>3</li>
-       </ul>
+       <AccordionTitle/>
+       <AccordionBody/>
      </div>
   )
 }
 
-function Star() {
-  return <div>star</div>
+export function AccordionTitle() {
+  return <h3>Menu</h3>
+}
+
+export function AccordionBody() {
+  return (
+     <ul>
+       <li>1</li>
+       <li>2</li>
+       <li>3</li>
+     </ul>
+  )
 }
