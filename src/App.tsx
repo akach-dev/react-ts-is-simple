@@ -8,9 +8,12 @@ export function App() {
   return (
      <div className="App">
        <PageTitle title={'This is APP Component'}/>
+       <Accordion
+          collapsed
+          title={'Users'}/>
        <Rating/>
-       <Accordion title={'Menu'}/>
-       <button>a</button>
+       <Accordion
+          title={'Menu'}/>
      </div>
   );
 }
