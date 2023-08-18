@@ -5,7 +5,7 @@ import {AccordionBody} from "./AccordionBody";
 
 type  AccordionPropsType = {
   title: string
-  collapsed?: boolean
+  collapsed: boolean
 }
 
 export function Accordion({title, collapsed}: AccordionPropsType) {
@@ -13,7 +13,7 @@ export function Accordion({title, collapsed}: AccordionPropsType) {
      <div>
        <AccordionTitle title={title}/>
        {
-          collapsed && (
+          !collapsed && (
              <AccordionBody key={'body'}/>
           )
        }
