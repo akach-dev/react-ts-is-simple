@@ -1,6 +1,9 @@
 import React from "react";
-import {TopCarsType} from "../App";
 
+export type TopCarsType = {
+  manufacturer: string
+  model: string
+}
 type CarsPropsType = {
   cars: TopCarsType[]
 }
