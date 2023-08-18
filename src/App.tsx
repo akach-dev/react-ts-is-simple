@@ -3,6 +3,7 @@ import './App.css';
 import {PageTitle} from "./components/PageTitle";
 import {Accordion} from "./components/accordion/Accordion";
 import {Rating} from "./components/Rating";
+import {OnOff} from "./components/onOff/OnOff";
 
 
 export function App() {
@@ -17,6 +18,7 @@ export function App() {
        <Rating value={3}/>
        <Rating value={4}/>
        <Rating value={5}/>
+       <OnOff bulb={true}/>
      </>
   )
 }

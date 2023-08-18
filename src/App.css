@@ -11,6 +11,23 @@ li:not(:last-child) {
     margin-bottom: 1rem;
 }
 
-.bulb {
+.onOff {
+    display: flex;
+    gap: 1rem;
+}
 
+.bulb {
+    height: 17px;
+    width: 17px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.on {
+    background-color: lightgreen;
+
+}
+
+.off {
+    background-color: red;
 }

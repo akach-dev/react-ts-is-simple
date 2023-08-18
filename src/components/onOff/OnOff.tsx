@@ -1,11 +1,15 @@
 import React from 'react';
 
-export const OnOff = () => {
+type OnOffPropsType = {
+  bulb: boolean
+}
+
+export const OnOff = ({bulb}: OnOffPropsType) => {
   return (
-     <div>
-       <span>On</span>
-       <span>Off</span>
-       <span className={'bulb'}></span>
+     <div className={'onOff'}>
+       <span className={bulb ? 'on' : ''}>On</span>
+       <span className={!bulb ? 'off' : ''}>Off</span>
+       <span className={bulb ? 'on bulb' : 'off bulb'}> </span>
      </div>
   );
 };
