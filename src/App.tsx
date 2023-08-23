@@ -14,12 +14,8 @@ export function App() {
        {/*<Accordion title={'Users'} collapsed={false}/>*/}
        <UnControlledAccordion title={'Menu'} collapsed={false}/>
        <UnControlledAccordion title={'Users'} collapsed={false}/>
-       <Rating value={0}/>
-       <Rating value={1}/>
-       <Rating value={2}/>
-       <Rating value={3}/>
-       <Rating value={4}/>
-       <Rating value={5}/>
+       <Rating/>
+
        <OnOff/>
      </>
   )
