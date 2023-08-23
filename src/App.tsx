@@ -15,7 +15,6 @@ export function App() {
        <UnControlledAccordion title={'Menu'} collapsed={false}/>
        <UnControlledAccordion title={'Users'} collapsed={false}/>
        <Rating/>
-
        <OnOff/>
      </>
   )

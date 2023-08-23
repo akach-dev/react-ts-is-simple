@@ -11,7 +11,6 @@ export const Rating: FC<RatingPropsType> = () => {
   const selectHandler = (value: number) => setSelect(value)
   return (
      <div>
-       <button onClick={() => selectHandler(0)}>0</button>
        <Star selected={select > 0}/>
        <button onClick={() => selectHandler(1)}>1</button>
        <Star selected={select > 1}/>
