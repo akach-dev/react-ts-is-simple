@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 type OnOffPropsType = {
   // bulb: boolean
@@ -6,20 +6,21 @@ type OnOffPropsType = {
 
 export const OnOff = (props: OnOffPropsType) => {
 
-  let bulb
+  const [bulb, setBulb] = useState(false)
 
-  const onHandler = () => bulb = true
-  const offHandler = () => bulb = true
-
+  const onHandler = () => setBulb(true)
+  const offHandler = () => setBulb(false)
 
   return (
      <div className={'onOff'}>
-       <span
-          onClick={}
-          className={bulb ? 'on' : ''}>On</span>
-       <span
-          onClick={}
-          className={!bulb ? 'off' : ''}>Off</span>
+       <button
+          onClick={onHandler}
+          className={bulb ? 'on' : ''}>On
+       </button>
+       <button
+          onClick={offHandler}
+          className={!bulb ? 'off' : ''}>Off
+       </button>
        <span className={bulb ? 'on bulb' : 'off bulb'}> </span>
      </div>
   );
