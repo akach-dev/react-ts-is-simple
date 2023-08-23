@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, {FC, useState} from 'react';
 
 type OnOffPropsType = {
   // bulb: boolean
 }
 
-export const OnOff = (props: OnOffPropsType) => {
+export const OnOff: FC<OnOffPropsType> = () => {
 
   const [bulb, setBulb] = useState(false)
 
