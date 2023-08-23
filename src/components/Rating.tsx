@@ -13,10 +13,8 @@ export const Rating: FC<RatingPropsType> = () => {
      <div>
        <button onClick={() => selectHandler(0)}>0</button>
        <Star selected={select > 0}/>
-
        <button onClick={() => selectHandler(1)}>1</button>
        <Star selected={select > 1}/>
-
        <button onClick={() => selectHandler(2)}>2</button>
        <Star selected={select > 2}/>
        <button onClick={() => selectHandler(3)}>3</button>
