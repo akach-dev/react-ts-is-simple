@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import {UnControlledAccordionTitle} from "./UnControlledAccordionTitle";
 import {UnControlledAccordionBody} from "./UnControlledAccordionBody";
@@ -8,12 +8,17 @@ type  UnControlledAccordionPropsType = {
   collapsed: boolean
 }
 
-export function UnControlledAccordion({title, collapsed}: UnControlledAccordionPropsType) {
+export function UnControlledAccordion({title}: UnControlledAccordionPropsType) {
+
+  const [collapsed, setCollapsed] = useState(false)
+
+  const collapsedHandler = () => setCollapsed(prevState => !prevState)
+
   return (
      <div>
-       <UnControlledAccordionTitle title={title}/>
+       <UnControlledAccordionTitle callback={collapsedHandler} title={title}/>
        {
-          !collapsed && (
+          collapsed && (
              <UnControlledAccordionBody key={'body'}/>
           )
        }

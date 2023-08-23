@@ -12,7 +12,7 @@ export function App() {
        <PageTitle title={'This is APP Component'}/>
        {/*<Accordion title={'Menu'} collapsed/>*/}
        {/*<Accordion title={'Users'} collapsed={false}/>*/}
-       <UnControlledAccordion title={'Users'} collapsed={false}/>
+       <UnControlledAccordion title={'Menu'} collapsed={false}/>
        <UnControlledAccordion title={'Users'} collapsed={false}/>
        <Rating value={0}/>
        <Rating value={1}/>
