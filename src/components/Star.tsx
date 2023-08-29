@@ -1,19 +1,14 @@
 type StarPropsType = {
   selected: boolean
+  setSelect: (select: ValueType) => void
+  value: ValueType
+
 }
 
-export function Star({selected}: StarPropsType) {
-  return (
-     <>
-       {
-         selected ?
-            (
-               <span><b>&#10032;</b></span>
-            ) : (
-               <span>&#10032;</span>
+type ValueType = 0 | 1 | 2 | 3 | 4 | 5
 
-            )
-       }
-     </>
-  )
+
+export function Star({selected, setSelect, value}: StarPropsType) {
+  return <span onClick={() => setSelect(value)}> {selected ? <b>&#10032;</b> : <small>&#10032;</small>} </span>
+
 }
