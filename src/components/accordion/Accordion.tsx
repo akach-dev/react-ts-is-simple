@@ -6,19 +6,17 @@ import {AccordionBody} from "./AccordionBody";
 type  AccordionPropsType = {
   title: string
   collapsed: boolean
-  setCollapsed: (collapsed: boolean) => void
+  callback: () => void
 }
 
-export function Accordion({title, collapsed, setCollapsed}: AccordionPropsType) {
-
-  const setCollapsedHandler = () => setCollapsed(!collapsed)
+export function Accordion({title, collapsed, callback}: AccordionPropsType) {
 
 
   return (
      <div>
-       <AccordionTitle title={title} callback={setCollapsedHandler}/>
+       <AccordionTitle title={title} callback={callback}/>
        {
-          collapsed && (
+          !collapsed && (
              <AccordionBody key={'body'}/>
           )
        }

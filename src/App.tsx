@@ -13,11 +13,14 @@ export function App() {
   const [collapsed, setCollapsed] = useState<boolean>(false)
   const [ratingValue, setRatingValue] = useState<ValueType>(0)
 
+  const setCollapsedHandler = () => setCollapsed(prev => !prev)
+
+
   return (
      <>
        <PageTitle title={'This is APP Component'}/>
-       <Accordion title={'Menu'} collapsed={collapsed} setCollapsed={setCollapsed}/>
-       <Accordion title={'Users'} collapsed={collapsed} setCollapsed={setCollapsed}/>
+       <Accordion title={'Menu'} collapsed={collapsed} callback={setCollapsedHandler}/>
+       <Accordion title={'Users'} collapsed={collapsed} callback={setCollapsedHandler}/>
        {/*<UnControlledAccordion title={'Menu'}/>*/}
        {/* eslint-disable-next-line react/jsx-no-undef */}
        <UnControlledAccordion title={'Users'}/>
