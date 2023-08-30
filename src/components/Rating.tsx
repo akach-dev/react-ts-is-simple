@@ -11,11 +11,11 @@ export const Rating: FC<RatingPropsType> = ({setValue, value}) => {
 
   return (
      <div>
-       <Star value={1} setSelect={setValue} selected={value > 0}/>
-       <Star value={2} setSelect={setValue} selected={value > 1}/>
-       <Star value={3} setSelect={setValue} selected={value > 2}/>
-       <Star value={4} setSelect={setValue} selected={value > 3}/>
-       <Star value={5} setSelect={setValue} selected={value > 4}/>
+       <Star callback={() => setValue(1)} selected={value > 0}/>
+       <Star callback={() => setValue(2)} selected={value > 1}/>
+       <Star callback={() => setValue(3)} selected={value > 2}/>
+       <Star callback={() => setValue(4)} selected={value > 3}/>
+       <Star callback={() => setValue(5)} selected={value > 4}/>
      </div>
   )
 }
