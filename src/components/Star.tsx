@@ -5,7 +5,7 @@ type StarPropsType = {
 
 }
 
-type ValueType = 0 | 1 | 2 | 3 | 4 | 5
+export type ValueType = 0 | 1 | 2 | 3 | 4 | 5
 
 
 export function Star({selected, setSelect, value}: StarPropsType) {
