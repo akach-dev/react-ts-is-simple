@@ -3,7 +3,6 @@ import {useState} from "react";
 import {ValueType} from "../Star";
 
 export default {
-  title: 'Rating stories',
   component: Rating
 }
 

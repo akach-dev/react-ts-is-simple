@@ -23,18 +23,17 @@ export default {
 }
 
 
-const onClickHandler = action('Collapsed Accordion')
+const callback = action('accordion mode change event fired ')
 
 export const CollapsedAccordion = () => {
   return (
-     <Accordion title={'Collapsed Accordion'} collapsed={true} callback={onClickHandler}/>
+     <Accordion title={'Collapsed Accordion'} collapsed={true} callback={callback}/>
 
   )
 }
 export const OpenedAccordion = () => {
   return (
-     <Accordion title={'Opened Accordion'} collapsed={false} callback={() => {
-     }}/>
+     <Accordion title={'Opened Accordion'} collapsed={false} callback={callback}/>
   )
 }
 
