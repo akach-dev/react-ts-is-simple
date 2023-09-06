@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {PageTitle} from "./components/PageTitle";
-import {Rating} from "./components/Rating";
+import {Rating} from "./components/Rating/Rating";
 import {OnOff} from "./components/onOff/OnOff";
 import {ValueType} from "./components/Star";
 import {Accordion} from "./components/accordion/Accordion";

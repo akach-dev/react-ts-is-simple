@@ -1,4 +1,4 @@
-import {Star, ValueType} from "./Star";
+import {Star, ValueType} from "../Star";
 import React, {FC} from "react";
 
 type RatingPropsType = {
