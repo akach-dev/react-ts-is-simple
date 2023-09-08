@@ -1,12 +1,12 @@
 import React, {FC, useState} from 'react';
 
 type OnOffPropsType = {
-  // bulb: boolean
+  defaultOn?: boolean
 }
 
-export const OnOff: FC<OnOffPropsType> = () => {
+export const OnOff: FC<OnOffPropsType> = ({defaultOn}) => {
 
-  const [bulb, setBulb] = useState(false)
+  const [bulb, setBulb] = useState(defaultOn ? defaultOn : false)
 
   const onHandler = () => setBulb(true)
   const offHandler = () => setBulb(false)
