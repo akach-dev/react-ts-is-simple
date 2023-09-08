@@ -4,19 +4,6 @@ import {action} from '@storybook/addon-actions';
 
 import {Accordion} from "./Accordion";
 
-// const meta: Meta<typeof Accordion> = {
-//   component: Accordion,
-// };
-//
-// export default meta;
-//
-// type Story = StoryObj<typeof Accordion>;
-// export const FirstStory: Story = {
-//   args: {
-//     title: 'open',
-//     collapsed: true,
-//   },
-// }
 
 export default {
   component: Accordion
@@ -24,16 +11,22 @@ export default {
 
 
 const callback = action('accordion mode change event fired ')
+const callbackValue = action('accordion callbackValue')
+
+const data = [{title: 'Alex', value: 1}, {title: 'Max', value: 2}, {title: 'Oksana', value: 3}]
+
 
 export const CollapsedAccordion = () => {
   return (
-     <Accordion title={'Collapsed Accordion'} collapsed={true} callback={callback}/>
+     <Accordion title={'Collapsed Accordion'} collapsed={true} callback={callback} data={data}
+                callbackValue={callbackValue}/>
 
   )
 }
 export const OpenedAccordion = () => {
   return (
-     <Accordion title={'Opened Accordion'} collapsed={false} callback={callback}/>
+     <Accordion title={'Opened Accordion'} collapsed={false} callback={callback} data={data}
+                callbackValue={callbackValue}/>
   )
 }
 
@@ -42,6 +35,7 @@ export const ClickAccordion = () => {
   const [collapsed, setCollapsed] = useState(false)
 
   return (
-     <Accordion title={'Click Accordion'} collapsed={collapsed} callback={() => setCollapsed(!collapsed)}/>
+     <Accordion title={'Users'} collapsed={collapsed} callback={() => setCollapsed(!collapsed)} data={data}
+                callbackValue={callbackValue}/>
   )
 }

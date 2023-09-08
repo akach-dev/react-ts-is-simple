@@ -1,5 +1,4 @@
 import {UnControlledAccordion} from "./UnControlledAccordion";
-import {action} from "@storybook/addon-actions";
 
 
 export default {
@@ -12,6 +11,7 @@ export default {
 export const ClickAccordion = () => {
 
   return (
+     
      <UnControlledAccordion title={'Click Accordion'}/>
   )
 }
