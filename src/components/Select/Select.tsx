@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import styles from './Select.module.css'
 
 export type DataType = {
@@ -13,18 +13,41 @@ type  SelectPropsType = {
 
 export const Select: FC<SelectPropsType> = ({items, onChange, value}) => {
 
-  const selectedItem = items.find(item => item.value == value)
+  const [active, setActive] = useState(false)
+  const [hoveredElementValue, setHoveredElementValue] = useState(value)
+
+  const selectedItem = items.find(item => item.value === value)
+  const hoveredItem = items.find(item => item.value === hoveredElementValue)
+
+  const toggleItems = () => setActive(!active)
+
+  const onItemClick = (value: string) => {
+    onChange(value)
+    toggleItems()
+  }
 
   return (
      <div className={styles.select}>
-       <h3>{selectedItem && selectedItem.title}</h3>
-       <div>
-         {
-           items.map(el => {
-             return <div key={el.title}>{el.title}</div>
-           })
-         }
-       </div>
+
+       <span onClick={toggleItems}>{selectedItem && selectedItem.title}</span>
+       {
+          active && (
+             <div className={styles.items}>
+               {
+                 items.map(el => {
+                   return <div
+                      onMouseEnter={() => setHoveredElementValue(el.value)}
+                      onClick={() => onItemClick(el.value)}
+                      key={el.title}
+                      className={styles.item + ' ' + (hoveredItem === el ? styles.selected : '')}>
+                     {el.title}
+                   </div>
+                 })
+               }
+             </div>
+          )
+       }
+
      </div>
   );
 };
