@@ -6,6 +6,7 @@ import {OnOff} from "./components/onOff/OnOff";
 import {ValueType} from "./components/Star";
 import {Accordion} from "./components/accordion/Accordion";
 import {UnControlledAccordion} from "./components/uncontrolledaccordion/UnControlledAccordion";
+import {Select} from "./components/Select/Select";
 
 
 export function App() {
@@ -19,8 +20,8 @@ export function App() {
   return (
      <>
        <PageTitle title={'This is APP Component'}/>
-       <Accordion title={'Menu'} collapsed={collapsed} callback={setCollapsedHandler}/>
-       <Accordion title={'Users'} collapsed={collapsed} callback={setCollapsedHandler}/>
+       {/*<Accordion title={'Menu'} collapsed={collapsed} callback={setCollapsedHandler}/>*/}
+       {/*<Accordion title={'Users'} collapsed={collapsed} callback={setCollapsedHandler}/>*/}
        {/*<UnControlledAccordion title={'Menu'}/>*/}
        {/* eslint-disable-next-line react/jsx-no-undef */}
        <UnControlledAccordion title={'Users'}/>
