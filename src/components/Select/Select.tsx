@@ -1,22 +1,23 @@
 import React, {FC} from 'react';
+import styles from './Select.module.css'
 
 export type DataType = {
   title: string
   value: any
 }
 type  SelectPropsType = {
-  value: string
+  value?: string
   items: DataType[]
-  callbackValue: (value: any) => void
+  onChange: (value: string) => void
 }
 
-export const Select: FC<SelectPropsType> = ({items, callbackValue, value}) => {
+export const Select: FC<SelectPropsType> = ({items, onChange, value}) => {
 
-  const selectValue = items.find(item => item.value === value)
+  const selectedItem = items.find(item => item.value == value)
 
   return (
-     <>
-       <h3>{selectValue && selectValue.title}</h3>
+     <div className={styles.select}>
+       <h3>{selectedItem && selectedItem.title}</h3>
        <div>
          {
            items.map(el => {
@@ -24,6 +25,6 @@ export const Select: FC<SelectPropsType> = ({items, callbackValue, value}) => {
            })
          }
        </div>
-     </>
+     </div>
   );
 };
