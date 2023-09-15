@@ -23,9 +23,8 @@ export function App() {
        {/*<Accordion title={'Menu'} collapsed={collapsed} callback={setCollapsedHandler}/>*/}
        {/*<Accordion title={'Users'} collapsed={collapsed} callback={setCollapsedHandler}/>*/}
        {/*<UnControlledAccordion title={'Menu'}/>*/}
-       {/* eslint-disable-next-line react/jsx-no-undef */}
        <UnControlledAccordion title={'Users'}/>
-       <Rating value={ratingValue} setValue={setRatingValue}/>
+       {/*<Rating value={ratingValue} setValue={setRatingValue}/>*/}
        <OnOff/>
      </>
   )

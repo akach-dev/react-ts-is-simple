@@ -52,11 +52,6 @@ export const Select: FC<SelectPropsType> = ({items, onChange, value}) => {
 
   };
   return <>
-    {/*<select name="" id="">*/}
-    {/*  <option value="">Alex</option>*/}
-    {/*  <option value="">Max</option>*/}
-    {/*  <option value="">Oksana</option>*/}
-    {/*</select>*/}
     <div className={styles.select} tabIndex={0} onBlur={onBlurHandler} onKeyUp={onKeyUp}>
 
       <span onClick={toggleItems}>{selectedItem && selectedItem.title}</span>
