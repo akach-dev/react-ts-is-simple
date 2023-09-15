@@ -31,17 +31,25 @@ export const Select: FC<SelectPropsType> = ({items, onChange, value}) => {
   }
 
   const onBlurHandler = () => {
-    if (active) toggleItems()
+    setActive(false)
   };
   const onKeyUp = (e: KeyboardEvent<HTMLDivElement>) => {
-    for (let i = 0; i < items.length; i++) {
-      if (items[i].value === hoveredElementValue) {
-        if (items[i + 1]) {
-          onChange(items[i + 1].value)
-          break
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      for (let i = 0; i < items.length; i++) {
+        if (items[i].value === hoveredElementValue) {
+          const contenderElement = e.key === "ArrowDown" ? items[i + 1] : items[i - 1]
+          if (contenderElement) {
+            onChange(contenderElement.value)
+            return
+          }
+        }
+        if (!selectedItem) {
+          onChange(items[0].value)
         }
       }
     }
+    if (e.key === "Escape" || e.key === "Enter") onBlurHandler()
+
   };
   return <>
     {/*<select name="" id="">*/}
