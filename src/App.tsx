@@ -5,9 +5,8 @@ import {Rating} from "./components/Rating/Rating";
 import {OnOff} from "./components/onOff/OnOff";
 import {ValueType} from "./components/Star";
 import {Accordion} from "./components/accordion/Accordion";
-import {UnControlledAccordion} from "./components/uncontrolledaccordion/UnControlledAccordion";
+import {UnControlledAccordion} from "./components/Uncontrolledaccordion/UnControlledAccordion";
 import {Select} from "./components/Select/Select";
-
 
 export function App() {
 

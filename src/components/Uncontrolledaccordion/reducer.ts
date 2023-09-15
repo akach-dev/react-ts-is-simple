@@ -1,10 +1,11 @@
-type StateType = {
+export type StateType = {
   collapsed: boolean
 }
 export const TOGGLE_STATE = 'TOGGLE_STATE'
-type ActionType = {
+export type ActionType = {
   type: string
 }
+
 export const reducer = (state: StateType, action: ActionType): StateType => {
   switch (action.type) {
     case TOGGLE_STATE :
