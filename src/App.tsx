@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import {PageTitle} from "./components/PageTitle";
 import {Rating} from "./components/Rating/Rating";
