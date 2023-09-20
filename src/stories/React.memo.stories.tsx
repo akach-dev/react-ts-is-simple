@@ -24,12 +24,17 @@ export const HelpsToReactMemo = () => {
 
   const increment = () => setCounter(counter + 1)
 
+  const addUser = () => {
+    setUsers([...users, 'Misha' + new Date().getTime()])
+  }
 
   const filterUsers = useMemo(() => users.filter(user => user.toLowerCase().includes('m')), [users])
 
 
   return <div>
     <button onClick={increment}>+ {counter}</button>
+    <button onClick={addUser}>Add User</button>
+
     <Users users={filterUsers}/>
   </div>
 
