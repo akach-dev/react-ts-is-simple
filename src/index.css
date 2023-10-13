@@ -12,3 +12,23 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.analog-clock {
+    max-width: 10%;
+
+}
+
+.hand {
+}
+
+.hour-hand {
+
+}
+
+.minute-hand {
+
+}
+
+.second-hand {
+
+}

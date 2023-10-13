@@ -8,6 +8,7 @@ import {Accordion} from "./components/accordion/Accordion";
 import {UnControlledAccordion} from "./components/Uncontrolledaccordion/UnControlledAccordion";
 import {Select} from "./components/Select/Select";
 
+
 export function App() {
 
   const [collapsed, setCollapsed] = useState<boolean>(false)

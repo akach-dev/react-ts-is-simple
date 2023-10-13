@@ -1,5 +1,4 @@
 import {useCallback, useEffect, useMemo, useState} from "react";
-import {log} from "util";
 
 export default {
   title: 'useEffect demo'
@@ -12,7 +11,7 @@ export const SimpleExample1 = () => {
   console.log('Example1')
 
   useEffect(() => {
-    console.log('useEffect')
+    console.log('useEffect counter')
     document.title = counter.toString()
   }, [counter]);
 
