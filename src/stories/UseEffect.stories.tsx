@@ -21,7 +21,7 @@ export const SimpleExample1 = () => {
   </div>
 
 }
-export const SetTimeoutExample1 = () => {
+export const SetTimeoutExample = () => {
   const date = new Date()
   const hour = date.getHours()
   const minutes = date.getMinutes()
@@ -53,4 +53,35 @@ export const SetTimeoutExample1 = () => {
 
 }
 
+export const ResetEffectExample = () => {
+  const [counter, setCounter] = useState(0)
+  console.log('Component rendered ' + counter)
+
+  useEffect(() => {
+    console.log('useEffect occurred ' + counter)
+
+    return () => {
+      console.log('RESET CLEAN UP ' + counter)
+    }
+  }, [counter]);
+
+
+  const increment = useCallback(() => {
+    setCounter(counter + 1)
+
+
+  }, [counter])
+
+  return <div>
+
+    <button onClick={increment}>  {counter} +</button>
+  </div>
+
+}
+export const KeyTrackerEffectExample = () => {
+
+  const [text, setText] = useState('')
+  return <>
+  </>
+}
 
