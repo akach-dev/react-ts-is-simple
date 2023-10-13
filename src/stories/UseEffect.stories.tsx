@@ -21,7 +21,7 @@ export const SimpleExample1 = () => {
   </div>
 
 }
-export const SetTimeoutExample = () => {
+export const SetIntervalExample = () => {
   const date = new Date()
   const hour = date.getHours()
   const minutes = date.getMinutes()
@@ -30,8 +30,6 @@ export const SetTimeoutExample = () => {
   console.log(seconds)
 
   useEffect(() => {
-
-
     const interval = setInterval(() => {
       console.log('setInterval')
       const updateSeconds = new Date().getSeconds()
@@ -81,7 +79,36 @@ export const ResetEffectExample = () => {
 export const KeyTrackerEffectExample = () => {
 
   const [text, setText] = useState('')
-  return <>
-  </>
+
+  console.log('Component rendered ' + text)
+
+  useEffect(() => {
+    let handler = (e: KeyboardEvent) => {
+      console.log(e.key)
+      setText(prevState => prevState + e.key)
+    }
+    window.document.addEventListener('keypress', handler)
+
+    return () => {
+      window.document.removeEventListener('keypress', handler)
+    }
+  }, []);
+
+  return <>{text}</>
+}
+export const SetTimeoutExample = () => {
+  const [text, setText] = useState('')
+
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setText('SetTimeoutExample')
+    }, 3000)
+    return () => {
+      clearTimeout(timeout)
+    }
+  }, [text]);
+
+  return <>{text}</>
 }
 
